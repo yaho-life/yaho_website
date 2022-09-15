@@ -23,7 +23,7 @@
   <meta name="twitter:description" content="YAHO, Đối tác chăm sóc trẻ theo yêu cầu đáng tin cậy của bạn" />
 
   <meta property="og:type" content='website' />
-  <meta property="og:url" content="http://yaho.life/"/>
+  <meta property="og:url" content="http://yaho.life/" />
   <meta property="og:site_name" content="Yaho" />
   <meta property="og:title" content="Yaho" />
   <meta property="og:description" content="YAHO, Đối tác chăm sóc trẻ theo yêu cầu đáng tin cậy của bạn" />
@@ -55,7 +55,10 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GXXQP95K8H"></script>;
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
     gtag('js', new Date());
 
     gtag('config', 'G-GXXQP95K8H');
@@ -76,9 +79,6 @@
         </h2>
       </div>
       <div class="header-center">
-        <!-- <a class="korean" href='#' onclick="document.getElementById('bottom_download').scrollIntoView();">앱 다운로드</a>
-        <a class="english" href='#' onclick="document.getElementById('bottom_download').scrollIntoView();">Download App</a>
-        <a class="vietnamese" href='#' onclick="document.getElementById('bottom_download').scrollIntoView();">Tải ứng dụng</a> -->
         <button class="korean"  onclick="document.getElementById('bottom_download').scrollIntoView();">앱 다운로드</button>
         <button class="english" onclick="document.getElementById('bottom_download').scrollIntoView();">Download App</button>
         <button class="vietnamese"  onclick="document.getElementById('bottom_download').scrollIntoView();">Tải ứng dụng</button>
@@ -437,9 +437,9 @@
           backup plan</p>
 
         <p class="vietnamese">Tận dụng lợi ích của dịch vụ YAHO bằng
-        cách đặt trước gói định kỳ theo tháng hoặc
-        ngay cả vào “phút cuối” 
-        như một kế hoạch dự phòng</p>
+          cách đặt trước gói định kỳ theo tháng hoặc
+          ngay cả vào “phút cuối”
+          như một kế hoạch dự phòng</p>
       </div>
 
       <div class="verify-list">
@@ -451,7 +451,7 @@
           your work-life balance</p>
 
         <p class="vietnamese">Cải thiện sự cân bằng giữa
-        công việc và cuộc sống của bạn</p>
+          công việc và cuộc sống của bạn</p>
       </div>
     </div>
 
@@ -483,8 +483,8 @@
           experienced caregivers.</p>
 
         <p class="vietnamese">Các gia sư YAHO là những bạn sinh viên đại học
-        Việt Nam có trình độ học vấn cao và nhân viên
-        chăm sóc có kinh nghiệm</p>
+          Việt Nam có trình độ học vấn cao và nhân viên
+          chăm sóc có kinh nghiệm</p>
       </div>
 
       <div class="verify-list">
@@ -502,11 +502,11 @@
         </p>
 
         <p class="vietnamese">Từ việc chơi đến việc học,
-        YAHO đều có thể cung cấp các
-        buổi học riêng.
+          YAHO đều có thể cung cấp các
+          buổi học riêng.
 
-        #Boardgames #TiếngAnh #Cắtdán #Toán #Kỹnăngxãhội 
-        #Bàitậpvềnhà #Sânchơi</p>
+          #Boardgames #TiếngAnh #Cắtdán #Toán #Kỹnăngxãhội
+          #Bàitậpvềnhà #Sânchơi</p>
       </div>
     </div>
   </section>
@@ -554,15 +554,15 @@
         <h2 class="vietnamese">BUỔI HỌC BẰNG<br>TIẾNG VIỆT</h2>
 
         <p class="price-text korean">
-          <span>150,000</span> VND
+          <span>120,000</span> VND
           <br>Per Hour
         </p>
         <p class="price-text english">
-          <span>150,000</span> VND
+          <span>120,000</span> VND
           <br>Per Hour
         </p>
         <p class="price-text vietnamese">
-          <span>150,000</span> VND
+          <span>120,000</span> VND
           <br>Mỗi giờ
         </p>
 
@@ -609,7 +609,6 @@
       Số lượng trẻ tối đa cho buổi học nhóm là 3</p>
   </section>
   <!-- section.price end -->
-
 
   <!-- section.download app link -->
   <section class="price content" id="bottom_download">
@@ -668,7 +667,7 @@
     <div class="page-count"></div>
 
   </section>
-  <!-- section.download app link end -->
+  <!-- section.download app link end -->  
 
 
   <!-- section.count start -->
@@ -712,10 +711,10 @@
     <p class="date korean">기준일 ({{information.date | date:'Y.m.d'}})</p>
     <p class="date english">{{information.eng_date}}</p>
     <p class="date vietnamese">
-      Kể từ ngày 
-      {{information.date | date:'d'}} 
-      tháng 
-      {{information.date | date:'m'}} 
+      Kể từ ngày
+      {{information.date | date:'d'}}
+      tháng
+      {{information.date | date:'m'}}
       năm
       {{information.date | date:'Y'}}
     </p>
@@ -876,9 +875,11 @@
   <!-- section.comment end -->
 
 
+  {% if section.on == True %}
   <!-- section.contact start -->
   <section class="contact">
     <h2 class="page-title korean">
+
       YAHO 돌봄서비스 1회 무료체험 신청하기
     </h2>
     <h2 class="page-title english">
@@ -1059,6 +1060,7 @@
     </form>
   </section>
   <!-- section.contact end -->
+  {% endif %}
 
 
   <!-- footer start -->
@@ -1067,7 +1069,7 @@
       <div class="footer-info">
         <p><span>상호명</span> 주식회사 야호랩</p>
         <p><span>사업자등록번호</span> 450-88-0205</p>
-        <p><span>대표자명</span> 권영욱, 윤선희</p>
+        <!--<p><span>대표자명</span> 권영욱, 윤선희</p>-->
         <br>
         <p><span>KOREA</span> 인천시 연수구 송도미래로 30, F동 B101호(스마트밸리 지식산업센터)</p>
         <p><span>VIETNAM</span> 2 Đường Lê Văn Miến, Thảo Điền, Quận 2, Thành phố Hồ Chí Minh</p>
@@ -1091,7 +1093,7 @@
       <div class="footer-info">
         <p><span>YAHO LAB COMPANY LIMITED</span></p>
         <p><span>Business Number</span> 0316642476</p>
-        <p><span>CEO</span> YOUNGWOOK KWON, SEONHEE YOON</p>
+        <!--<p><span>CEO</span> YOUNGWOOK KWON, SEONHEE YOON</p>-->
         <br>
         <p><span>KOREA</span> SMART VALLEY B101 UNIT F, SONGDO MIRAERO 30 INCHEON, SOUTH KOREA</p>
         <p><span>VIETNAM</span> 2 Đường Lê Văn Miến, Thảo Điền, Quận 2, Thành phố Hồ Chí Minh</p>
@@ -1113,7 +1115,7 @@
       <div class="footer-info">
         <p><span>CÔNG TY TNHH YAHO LAB</span></p>
         <p><span>Số đăng ký kinh doanh</span> 0316642476</p>
-        <p><span>CEO</span> YOUNGWOOK KWON, SEONHEE YOON</p>
+        <!--<p><span>CEO</span> YOUNGWOOK KWON, SEONHEE YOON</p>-->
         <br>
         <p><span>HÀN QUỐC</span> SMART VALLEY B101 UNIT F, SONGDO MIRAERO 30 INCHEON, SOUTH KOREA</p>
         <p><span>VIETNAM</span> 2 Đường Lê Văn Miến, Thảo Điền, Quận 2, Thành phố Hồ Chí Minh</p>
@@ -1158,11 +1160,17 @@
     $(function () {
       var windowWidth = window.matchMedia("screen and (max-width: 1200px)");
       var windowHeight = window.matchMedia("screen and (max-height: 900px)");
-        if (windowHeight.matches) { 
-          $('.main-mockup').animate({'margin-bottom': '-210px','opacity': '1'}, 1300);
-          } else {
-            $('.main-mockup').animate({'margin-bottom': '-300px','opacity': '1'}, 1300);
-          }
+      if (windowHeight.matches) {
+        $('.main-mockup').animate({
+          'margin-bottom': '-210px',
+          'opacity': '1'
+        }, 1300);
+      } else {
+        $('.main-mockup').animate({
+          'margin-bottom': '-300px',
+          'opacity': '1'
+        }, 1300);
+      }
       if (windowWidth.matches) {
         $('.main-mockup').animate({
           'margin-bottom': '-100px',
@@ -1333,24 +1341,24 @@
     });
   </script>
 
-<script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name" : "yaho.life/",
-  "url": "https://yaho.life/",
-  "foundingDate": "2021",
-  "founders": [ {
-  "@type": "Person",
-  "name": "Yaho"
-  } ],
-  "image": "/static/images/opengraph.png",
-  "description": "YAHO, Đối tác chăm sóc trẻ theo yêu cầu đáng tin cậy của bạn",
-  "contactPoint": [{
-  "@type": "ContactPoint",
-  "contactType": "customer service"
- }
- </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "yaho.life/",
+      "url": "https://yaho.life/",
+      "foundingDate": "2021",
+      "founders": [{
+        "@type": "Person",
+        "name": "Yaho"
+      }],
+      "image": "/static/images/opengraph.png",
+      "description": "YAHO, Đối tác chăm sóc trẻ theo yêu cầu đáng tin cậy của bạn",
+      "contactPoint": [{
+            "@type": "ContactPoint",
+            "contactType": "customer service"
+          }
+  </script>
 </body>
 
 </html>

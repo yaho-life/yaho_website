@@ -233,16 +233,6 @@ footer div span {
   column-gap: 100px;
 }
 
-.grid-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 80%;
-  margin: 0 auto;
-  justify-items: center;
-  align-items: flex-start;
-  column-gap: 100px;
-}
-
 .circle-wrap {
   width: 100%;
   border-radius: 50%;
